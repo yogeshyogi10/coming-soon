@@ -261,123 +261,57 @@ body, :host { font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Rob
   filter: none; /* shows icon’s original color */
 }
 
-/* Responsive *
-@media (max-width: 768px) {
-  .blob-a { width: 420px; height: 280px; left: -160px; }
-  .blob-b { width: 380px; height: 260px; right: -160px; }
-  .blob-c { width: 420px; height: 320px; left: -160px; }
-  .cs-form { max-width: 100%; }
-}
+/* ============================= */
+/* 📱 Responsive Breakpoints */
+/* ============================= */
 
-@media (max-width: 1024px) {
-  .cs-title { font-size: clamp(2rem, 6vw, 4rem); }
-  .cs-desc { font-size: clamp(0.9rem, 2vw, 1.1rem); }
-  .blob-a { width: clamp(180px, 35vw, 500px); }
-  .blob-b { width: clamp(140px, 28vw, 350px); }
-}
-
-/* Mobiles *
-@media (max-width: 768px) {
-  .cs-main { padding: 0 1rem; }
-  .cs-desc { margin-top: -1rem; }
-  .cs-form { flex-direction: column; border-radius: 12px; padding: 10px; }
-  .cs-form input, .cs-form button { width: 100%; border-radius: 8px; }
-  .blob-a { left: -10%; }
-  .blob-b { right: -10%; }
-  .cs-social { right: 10px; bottom: 10px; }
-}
-
-/* Small phones *
-@media (max-width: 480px) {
-  .cs-title { font-size: clamp(1.8rem, 8vw, 2.5rem); }
-  .cs-desc { font-size: 0.9rem; }
-  .blob-a, .blob-b { display: none; } /* hide blobs for very small screens 
-  .cs-social a { width: 36px; height: 36px; }
-  .cs-social a img { width: 18px; height: 18px; }
-}*/
-/*
-@media(max-width:1500px){
-  .blob-a{
-    margin-top: 0%;
-  }
-  .blob-b{
-    margin-top:0%;
-  }
-}
-*/
-
-
-/* Extra small devices (up to 400px) */
+/* Up to 400px */
 @media (max-width: 400px) {
   .cs-title { font-size: 2rem; }
   .cs-desc { font-size: 0.9rem; margin-top: -40px; }
-  .cs-form { flex-direction: column; gap: 6px; }
+  .cs-form { flex-direction: column; gap: 8px; }
   .cs-form input, .cs-form button { width: 100%; }
-  .blob-a img, .blob-b img { width: 250px; height: auto; }
+  .blob-a img, .blob-b img { width: 200px; height: auto; }
+  .cs-social { right: 0; margin-top: -10%; }
 }
 
-/* 401px - 450px */
-@media (max-width: 450px) {
-  .cs-title { font-size: 2.5rem; }
-  .cs-social { right: -40%; margin-top: -15%; }
-}
-
-/* 451px - 500px */
-@media (max-width: 500px) {
-  .cs-title { font-size: 3rem; }
-  .cs-form input { padding: 10px 14px; }
-  .blob-a img { width: 300px; height: 220px; }
-}
-
-/* 501px - 600px */
+/* 401px – 600px (small phones) */
 @media (max-width: 600px) {
-  .cs-title { font-size: 3.5rem; }
-  .cs-desc { max-width: 80%; }
-  .cs-social { right: -30%; }
+  .cs-title { font-size: 2.5rem; }
+  .cs-desc { max-width: 90%; font-size: 1rem; }
+  .blob-a img { width: 250px; height: auto; }
+  .blob-b img { width: 200px; height: auto; }
+  .cs-social { right: 0; margin-top: -5%; }
 }
 
-/* 601px - 750px */
-@media (max-width: 750px) {
-  .cs-title { font-size: 4rem; }
-  .cs-curly img { width: 100%; height: auto; }
-}
-
-/* 751px - 850px */
-@media (max-width: 850px) {
-  .cs-title { font-size: 4.5rem; }
-  .cs-desc { font-size: 1rem; }
-}
-
-/* 851px - 900px */
+/* 601px – 900px (tablets) */
 @media (max-width: 900px) {
-  .cs-main { padding: 20px; }
-  .blob-a img { width: 400px; }
-  .blob-b img { width: 280px; }
+  .cs-title { font-size: 3.5rem; }
+  .cs-desc { font-size: 1.1rem; }
+  .blob-a img { width: 350px; height: auto; }
+  .blob-b img { width: 280px; height: auto; }
+  .cs-social { right: -20%; margin-top: -15%; }
 }
 
-/* 901px - 1100px */
-@media (max-width: 1100px) {
-  .cs-title { font-size: 5rem; }
-  .cs-social { right: -20%; }
-}
-
-/* 1101px - 1200px */
+/* 901px – 1200px (small laptops) */
 @media (max-width: 1200px) {
-  .cs-title { font-size: 6rem; }
+  .cs-title { font-size: 5rem; }
   .cs-desc { font-size: 1.2rem; }
+  .blob-a img { width: 450px; height: auto; }
+  .blob-b img { width: 320px; height: auto; }
 }
 
-/* 1201px - 1500px */
+/* 1201px – 1500px (large desktops) */
 @media (max-width: 1500px) {
-  .cs-title { font-size: 7rem; }
-  .blob-a img { width: 500px; height: 350px; }
-  .blob-b img { width: 380px; height: 260px; }
+  .cs-title { font-size: 6rem; }
+  .blob-a img { width: 550px; height: auto; }
+  .blob-b img { width: 380px; height: auto; }
 }
 
-/* Larger than 1500px */
+/* >1500px (extra-large monitors) */
 @media (min-width: 1501px) {
-  .cs-title { font-size: 8rem; }
+  .cs-title { font-size: 7rem; }
   .cs-desc { font-size: 1.3rem; }
-  .blob-a img { width: 600px; height: 400px; }
-  .blob-b img { width: 450px; height: 300px; }
+  .blob-a img { width: 650px; height: auto; }
+  .blob-b img { width: 450px; height: auto; }
 }
