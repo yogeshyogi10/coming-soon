@@ -305,15 +305,15 @@ body, :host { font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Rob
 /* 1201px – 1500px (large desktops) */
 @media (max-width: 1500px) {
   .cs-title { font-size: 6rem; }
-  .blob-a img { width: 650px; height: 550px; }
+  .blob-a img { width: 650px; height: 550px; top: 30%; }
   .blob-b img { width: 380px; height: 300px; }
-  .cs-social  { right: -90px; top: 0px;}
+  .cs-social  { right: -90px; top: -10px;}
 }
 
 /* >1500px (extra-large monitors) */
 @media (min-width: 1501px) {
   .cs-title { font-size: 7rem; }
   .cs-desc { font-size: 1.3rem; }
-  .blob-a img { width: 650px; height: auto; }
+  .blob-a img { width: 650px; height: 600px; top: 20%; }
   .blob-b img { width: 450px; height: auto; }
 }
