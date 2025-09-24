@@ -305,8 +305,8 @@ body, :host { font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Rob
 @media (max-width: 1500px) {
   .cs-title { font-size: 6rem; }
   .blob-a img { width: 550px; height: 450px; }
-  .blob-b img { width: 380px; height: auto; }
-  .cs-social { right: -30px;}
+  .blob-b img { width: 380px; height: 300px; }
+  .cs-social a { right: 60px; top: 90px;}
 }
 
 /* >1500px (extra-large monitors) */
