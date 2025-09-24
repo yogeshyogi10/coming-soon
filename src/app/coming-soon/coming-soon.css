@@ -299,14 +299,15 @@ body, :host { font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Rob
   .cs-desc { font-size: 1.2rem; }
   .blob-a img { width: 450px; height: auto; }
   .blob-b img { width: 320px; height: auto; }
+  .cs-social {right: -90px; }
 }
 
 /* 1201px – 1500px (large desktops) */
 @media (max-width: 1500px) {
   .cs-title { font-size: 6rem; }
-  .blob-a img { width: 550px; height: 450px; }
+  .blob-a img { width: 650px; height: 550px; }
   .blob-b img { width: 380px; height: 300px; }
-  .cs-social a { right: 60px; top: 90px;}
+  .cs-social  { right: -90px; top: 0px;}
 }
 
 /* >1500px (extra-large monitors) */
