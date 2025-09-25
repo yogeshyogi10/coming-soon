@@ -182,9 +182,9 @@ body, :host { font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Rob
 
 /* Right blob */
 .blob-b {
-  top: 55%;
+  top: 52%;
   height: 100%;
-  right: 8%;
+  right: 3%;
   animation: floatB 10s ease-in-out infinite;
   z-index: -1;
 }
