@@ -7,16 +7,15 @@ body, :host { font-family: 'Montserrat', system-ui, -apple-system, Segoe UI, Rob
 /* Hide Angular starter placeholder area present below our page */
 .main { display: none; }
 
-html,body{
-  overflow-y: hidden;
-}
+
 
 /* Page wrapper */
 .cs-page {
   position: relative;
-  min-height: 100dvh;
+  height: 97.6vh;
   color: #fff;
   overflow-y: hidden;
+
 }
 
 /* Background and overlay */
@@ -43,9 +42,9 @@ html,body{
   width: 100%;
   height: 100%;
   z-index: -1;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
+  margin-top: -30px;
+  margin-left: -70px;
+  
   pointer-events: none;
 }
 .cs-curly img{
@@ -162,6 +161,8 @@ html,body{
   pointer-events: none; /* so clicks pass through */
   max-width: 250px;     /* resize as needed */
   opacity: 1;
+  max-width: 40vw;
+  height: auto;
 }
 
 /* Left blob */
@@ -174,8 +175,8 @@ html,body{
 }
 
 .blob-a img{
-  max-width: 90%;
-  height: auto;
+  width: 600px;
+  height: 400px;
   
 }
 
@@ -189,9 +190,33 @@ html,body{
 }
 
 .blob-b img{
-  max-width: 90%;
-  height: auto
-  
+  width: 400px;
+  height: 300px;
+  z-index: 0;
+}
+
+@media (max-width: 768px) {
+  .blob-a {
+    top: 20%;
+    max-width: 60vw;
+  }
+
+  .blob-b {
+    top: 40%;
+    max-width: 50vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .blob-a {
+    top: 15%;
+    max-width: 70vw;
+  }
+
+  .blob-b {
+    top: 35%;
+    max-width: 60vw;
+  }
 }
 
 
@@ -223,11 +248,11 @@ html,body{
 .cs-social {
   position: relative;
   right: 28px;
-  bottom: 20px;
+  bottom: 28px;
   display: flex;
   gap: 14px;
-  margin-top: 0;
-  right: 20px;
+  margin-top: -25%;
+  right: -60%;
   z-index: 5; /* visible above blobs/background */
 }
 
@@ -269,55 +294,27 @@ html,body{
 /* 📱 Responsive Breakpoints */
 /* ============================= */
 
-/* Up to 400px */
-@media (max-width: 400px) {
-  .cs-title { font-size: 2rem; }
-  .cs-desc { font-size: 0.9rem; margin-top: -40px; }
+/* Media Queries */
+@media (max-width: 1024px) {
+  .cs-title { font-size: clamp(2.5rem, 8vw, 6rem); }
+  .cs-desc { font-size: clamp(0.9rem, 1.2vw, 1.3rem); }
+  .cs-form input { padding: 10px 14px; }
+  .cs-form button { padding: 10px 14px; }
+}
+
+@media (max-width: 768px) {
+  .cs-title { font-size: clamp(2rem, 7vw, 5rem); }
+  .cs-desc { font-size: clamp(0.85rem, 1.1vw, 1.2rem); }
+  .blob-a { top: 20%; max-width: 60vw; }
+  .blob-b { top: 40%; max-width: 50vw; }
+}
+
+@media (max-width: 480px) {
+  .cs-title { font-size: clamp(1.5rem, 8vw, 3.5rem); }
+  .cs-desc { font-size: clamp(0.75rem, 3vw, 1rem); }
+  .cs-signup { margin-top: -5%; }
+  .blob-a { top: 15%; max-width: 70vw; }
+  .blob-b { top: 35%; max-width: 60vw; }
   .cs-form { flex-direction: column; gap: 8px; }
-  .cs-form input, .cs-form button { width: 100%; }
-  .blob-a img, .blob-b img { width: 200px; height: auto; }
-  .cs-social { right: 0; margin-top: -10%; }
-}
-
-/* 401px – 600px (small phones) */
-@media (max-width: 600px) {
-  .cs-title { font-size: 2.5rem; }
-  .cs-desc { max-width: 90%; font-size: 1rem; }
-  .blob-a img { width: 250px; height: auto; }
-  .blob-b img { width: 200px; height: auto; }
-  .cs-social { right: 0; margin-top: -5%; }
-}
-
-/* 601px – 900px (tablets) */
-@media (max-width: 900px) {
-  .cs-title { font-size: 3.5rem; }
-  .cs-desc { font-size: 1.1rem; }
-  .blob-a img { width: 350px; height: auto; }
-  .blob-b img { width: 280px; height: auto; }
-  .cs-social { right: -20%; margin-top: -15%; }
-}
-
-/* 901px – 1200px (small laptops) */
-@media (max-width: 1200px) {
-  .cs-title { font-size: 5rem; }
-  .cs-desc { font-size: 1.2rem; }
-  .blob-a img { width: 450px; height: auto; }
-  .blob-b img { width: 320px; height: auto; }
-  .cs-social {right: -90px; }
-}
-
-/* 1201px – 1500px (large desktops) */
-@media (max-width: 1500px) {
-  .cs-title { font-size: 6rem; }
-  .blob-a img { width: 650px; height: 550px; top: 30%; }
-  .blob-b img { width: 380px; height: 300px; }
-  .cs-social  { right: -90px; top: -10px;}
-}
-
-/* >1500px (extra-large monitors) */
-@media (min-width: 1501px) {
-  .cs-title { font-size: 7rem; }
-  .cs-desc { font-size: 1.3rem; }
-  .blob-a img { width: 650px; height: 600px; top: 20%; }
-  .blob-b img { width: 450px; height: auto; }
+  .cs-form input, .cs-form button { width: 100%; max-width: 300px; }
 }
