@@ -1,4 +1,4 @@
-/* 🌐 Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
@@ -12,14 +12,14 @@ html, body {
 
 .cs-page {
   position: relative;
-  min-height: 98vh;
+  min-height: 97vh;
   height: auto;
   overflow: hidden;
   font-family: "Montserrat", sans-serif;
   color: #fff;
 }
 
-/* 🔥 Background + overlay */
+/* Background + overlay */
 .cs-bg {
   position: absolute;
   inset: 0;
@@ -33,7 +33,7 @@ html, body {
   z-index: -2;
 }
 
-/* 🎨 Curly SVG */
+/* Curly SVG */
 .cs-curly {
   position: absolute;
   top: 0;
@@ -48,7 +48,7 @@ html, body {
   height: auto;
 }
 
-/* 🍔 Hamburger */
+/* Hamburger */
 .cs-header {
   position: absolute;
   top: 20px;
@@ -70,7 +70,7 @@ html, body {
   transition: 0.3s;
 }
 
-/* 📝 Main Content */
+/* Main Content */
 .cs-main {
   position: relative;
   text-align: center;
@@ -91,7 +91,7 @@ html, body {
   font-family: 'manrope';
 }
 
-/* ✉️ Signup Section */
+/* Signup Section */
 .cs-signup h3 {
   font-size: 1.3rem;
   margin-bottom: 12px;
@@ -124,7 +124,7 @@ html, body {
   transform: translateY(-2px);
 }
 
-/* 🌸 Blobs */
+/*  Blobs */
 .blob-a,
 .blob-b {
   position: absolute;
@@ -162,7 +162,7 @@ html, body {
 }
 
 
-/* 🔗 Social Icons */
+/* Social Icons */
 .cs-social {
   position: absolute;
   bottom: 20px;

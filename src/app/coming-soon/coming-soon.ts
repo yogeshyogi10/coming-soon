@@ -20,18 +20,21 @@ export class ComingSoon {
   const form = event.target as HTMLFormElement;
   const email = (form.querySelector('input[name="email"]') as HTMLInputElement).value;
 
-  fetch("https://script.google.com/macros/s/AKfycbyQmgDCqwzYil6Nxter01xzxfrRObM8qUZQRijlFE_7g5MOBkSWDQ7wWovo9cqoIT91/exec", {
+  const formData = new FormData();
+  formData.append("entry.611891699", email); // <-- replace with your Google Form field ID
+
+  fetch("https://docs.google.com/forms/d/e/1FAIpQLSfLdfNkQ_Go5nBVxBOE-MMbXHDXYFEn8W4glZu59PxJzkg4dg/formResponse", {
     method: "POST",
-    body: new URLSearchParams({ email })
+    body: formData,
+    mode: "no-cors"
   })
-  .then(res => res.json())
-  .then(data => {
+  .then(() => {
     alert("Thanks! You’ll be notified.");
     form.reset();
   })
   .catch(err => {
     console.error(err);
-    alert("Something went wrong. Try again later.");
+    alert("Something went wrong.");
   });
 }
 }
